@@ -1,4 +1,4 @@
-package org.alcoseba.Drools;
+package org.alcoseba.drools;
 
 import static org.junit.Assert.assertTrue;
 
