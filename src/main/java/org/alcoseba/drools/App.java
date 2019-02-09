@@ -17,6 +17,7 @@ public class App {
 			Account account = new Account(10);
 			kSession.insert(account);
 			kSession.fireAllRules();
+			System.out.println(account.getBalance());
 		} catch (Throwable t) {
 			t.printStackTrace();
 		}
