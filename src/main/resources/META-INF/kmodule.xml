@@ -6,6 +6,9 @@
 	<kbase name="dtables" packages="dtables">
 		<ksession name="ksession-dtables" />
 	</kbase>
+	<kbase name="drl-accounts" packages="drl-accounts">
+		<ksession name="ksession-drl-accounts" />
+	</kbase>
 	<kbase name="process" packages="process">
 		<ksession name="ksession-process" />
 	</kbase>
