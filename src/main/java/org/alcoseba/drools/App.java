@@ -12,9 +12,11 @@ public class App {
 			KieServices ks = KieServices.Factory.get();
 			KieContainer kContainer = ks.getKieClasspathContainer();
 			KieSession kSession = kContainer.newKieSession("ksession-rules");
+			// KieSession kSession = kContainer.newKieSession("ksession-drl-accounts");
 
 			// go !
 			Account account = new Account(10);
+			account.setName("test1");
 			kSession.insert(account);
 			kSession.fireAllRules();
 			System.out.println(account.getBalance());

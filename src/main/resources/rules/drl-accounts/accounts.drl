@@ -1,9 +1,23 @@
 import org.alcoseba.drools.model.Account;
+import org.alcoseba.drools.utils.Search;
 // rule values at A10, header at A5
 rule "Balance 10"
 	when
-		$account : Account(balance >= 10, bal : balance, true)
+		$account : Account(balance >= 10, name : name, true, Search.search(name) != null, true)
 	then
-		System.out.println("A");
-		System.out.println("B");
+		$account.setBalance(29);
+update($account);
+retract($account);
+		System.out.println("TEST");
+end
+
+// rule values at A11, header at A5
+rule "Zero Balance"
+	when
+		$account : Account(balance >= 10, name : name, true, Search.search(name) == null, true)
+	then
+		$account.setBalance(30);
+update($account);
+retract($account);
+		System.out.println("NON-TEST");
 end
