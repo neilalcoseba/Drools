@@ -16,7 +16,7 @@ public class App {
 
 			// go !
 			Account account = new Account(10);
-			account.setName("test1");
+			account.setName("test");
 			kSession.insert(account);
 			kSession.fireAllRules();
 			System.out.println(account.getBalance());
